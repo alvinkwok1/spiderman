@@ -10,7 +10,6 @@ import us.codecraft.webmagic.proxy.Proxy;
 import us.codecraft.webmagic.proxy.SimpleProxyProvider;
 import us.codecraft.webmagic.selector.Selectable;
 
-import javax.management.JMException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,9 +82,9 @@ public class GuoKeYunPageProcessor implements PageProcessor {
         request.setUrl("https://www.guokeyun.com/news/technology.html");
 
         githubSpider
-                .setDownloader(httpClientDownloader)
-                .addUrl("https://www.guokeyun.com/news/technology.html")
-//                .addRequest(request)
+//                .setDownloader(httpClientDownloader)
+//                .addUrl("https://www.guokeyun.com/news/technology.html")
+                .addRequest(request)
                 .thread(5).run();
     }
 }
